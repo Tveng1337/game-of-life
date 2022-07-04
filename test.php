@@ -79,7 +79,12 @@ class Life
         $this->life = $life;
     }
 
-    public function startGame(array $grid = null)
+    /**
+     * @param array|null $grid
+     *
+     * @return void
+     */
+    public function startGame(array $grid = null): void
     {
         is_array($grid) ? $this->setLife($grid) : $this->generateGrid();
 
